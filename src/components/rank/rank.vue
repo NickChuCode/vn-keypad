@@ -55,13 +55,13 @@ export default {
         width 100%
         padding 0 6px
         height 70px
-        background $color-highlight-background
+        background $color-theme-d
         border-radius 6px
         .box {
           flex 1
           margin 0 5px
           line-height 30px
-          background $color-highlight-background
+          background $color-theme-d
           font-size 25px
           &::placeholder {
             color $color-text-d

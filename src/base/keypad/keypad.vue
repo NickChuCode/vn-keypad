@@ -64,6 +64,7 @@
 </template>
 
 <script>
+import { addClass, removeClass } from 'common/js/dom'
 export default {
   name: 'keypad',
   data() {
@@ -139,12 +140,14 @@ export default {
     btnPress(e) {
       var num = this._getBtn(e)
       var btn = num === '.' ? this.$refs.pad.querySelector('.item-dot') : this.$refs.pad.querySelector(`.item-${num}`)
-      btn.style.backgroundColor = 'grey'
+      // btn.style.backgroundColor = 'grey'
+      addClass(btn, 'key-down')
     },
     btnUp(e) {
       var num = this._getBtn(e)
       var btn = num === '.' ? this.$refs.pad.querySelector('.item-dot') : this.$refs.pad.querySelector(`.item-${num}`)
-      btn.style.backgroundColor = 'white'
+      // btn.style.backgroundColor = 'white'
+      removeClass(btn, 'key-down')
     },
     deleteStart(e) {
       this.touch.initiated = true
@@ -188,7 +191,6 @@ export default {
     right 0
     bottom 0
     left 0
-    background-color $color-background-d
     &.pad-fade-enter-active, &.pad-fade-leave-active {
       transition opacity 0.3s
       .pad-wrapper {
@@ -242,6 +244,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+             background-color $color-theme-d
+           }
         }
         .item-2 {
           place-self stretch
@@ -251,6 +256,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
         }
         .item-3 {
           place-self stretch
@@ -260,6 +268,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
         }
         .item-4 {
           place-self stretch
@@ -269,6 +280,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
         }
         .item-5 {
           place-self stretch
@@ -278,6 +292,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
         }
         .item-6 {
           place-self stretch
@@ -287,6 +304,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
         }
         .item-7 {
           place-self stretch
@@ -296,6 +316,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
         }
         .item-8 {
           place-self stretch
@@ -305,6 +328,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
         }
         .item-9 {
           place-self stretch
@@ -314,6 +340,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
         }
         .item-dot {
           place-self stretch
@@ -323,6 +352,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
         }
         .item-clear {
           place-self stretch
@@ -332,6 +364,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
         }
         .item-0 {
           place-self stretch
@@ -341,6 +376,9 @@ export default {
           justify-content center
           border-bottom 1px solid grey
           border-right 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
         }
         .item-ok {
           place-self stretch
@@ -349,6 +387,12 @@ export default {
           align-items center
           justify-content center
           border-bottom 1px solid grey
+          background-color $color-theme-d
+          color $color-text
+          &.key-down {
+            background-color $color-theme
+            color white
+          }
         }
         .item-back {
           place-self stretch
@@ -357,6 +401,9 @@ export default {
           align-items center
           justify-content center
           border-bottom 1px solid grey
+          &.key-down {
+            background-color $color-theme-d
+          }
           .icon-back {
             font-size 40px
             font-weight bold
