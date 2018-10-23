@@ -1,18 +1,18 @@
 <template>
   <div id="app">
     <m-head></m-head>
-    <rank></rank>
+    <example></example>
   </div>
 </template>
 
 <script>
 import MHead from 'components/m-header/m-header'
-import Rank from 'components/rank/rank'
+import Example from 'components/example/example'
 export default {
   name: 'App',
   components: {
     MHead,
-    Rank
+    Example
   }
 }
 </script>
