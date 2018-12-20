@@ -13,7 +13,7 @@ const createLintingRule = () => ({
   test: /\.(js|vue)$/,
   loader: 'eslint-loader',
   enforce: 'pre',
-  include: [resolve('src'), resolve('test')],
+  include: [resolve('example'), resolve('lib')],
   options: {
     formatter: require('eslint-friendly-formatter'),
     emitWarning: !config.dev.showEslintErrorsInOverlay
@@ -23,8 +23,8 @@ const createLintingRule = () => ({
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    app: NODE_ENV == 'production' ? './src/index.js' : './src/main.js'
-    // app: './src/main.js'
+    app: NODE_ENV === 'production' ? './lib/index.js' : './example/main.js'
+    // app: './example/main.js'
   },
   output: {
     path: config.build.assetsRoot,
@@ -37,11 +37,12 @@ module.exports = {
     extensions: ['.js', '.vue', '.json'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src'),
-      'common': resolve('src/common'),
-      'components': resolve('src/components'),
-      'api': resolve('src/api'),
-      'base': resolve('src/base')
+      '@': resolve('lib'),
+      '#': resolve('example'),
+      'common': resolve('lib/common'),
+      'components': resolve('example/components'),
+      'api': resolve('example/api'),
+      'base': resolve('lib/base')
     }
   },
   module: {

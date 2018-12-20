@@ -22,7 +22,7 @@ const banner =
   ' */'
 
 const builds = [{
-  input: resolve('src/index.js'),
+  input: resolve('example/index.js'),
   output: {
     file: resolve('dist/vn-keypad.js'),
     name: 'VnKeypad',
@@ -35,7 +35,7 @@ const builds = [{
     })
   ]
 }, {
-  entry: resolve('src/index.js'),
+  entry: resolve('example/index.js'),
   dest: resolve('dist/vn-keypad.esm.js'),
   format: 'es',
   moduleName: 'VnKeypad',
@@ -46,7 +46,7 @@ const builds = [{
   ],
   banner
 }, {
-  entry: resolve('src/index.js'),
+  entry: resolve('example/index.js'),
   dest: resolve('dist/vn-keypad.min.js'),
   format: 'umd',
   moduleName: 'VnKeypad',

@@ -22,7 +22,7 @@ const webpackConfig = merge(baseWebpackConfig, {
     })
   },
   devtool: config.build.productionSourceMap ? config.build.devtool : false,
-  // entry: './src/index.js',
+  // entry: './example/index.js',
   output: {
     path: config.build.assetsRoot,
     filename: 'vn-keypad.js',
