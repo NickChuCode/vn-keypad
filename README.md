@@ -21,7 +21,8 @@ npm run dev
 # build the source code of the component
 npm run build
 ```
-demo:
+## demo:
+
 ![demo](https://github.com/NickChuCode/vn-keypad/blob/master/vn-keypad.gif)
 ### Options
 |    Property    |    Description   |   type   |	default	|
