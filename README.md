@@ -22,7 +22,7 @@ npm run dev
 npm run build
 ```
 demo:
-![demo](https://github.com/NickChuCode/vn-keypad/blob/master/vn-keypad.gif){:height="50%" width="50%"}
+![demo](https://github.com/NickChuCode/vn-keypad/blob/master/vn-keypad.gif)
 ### Options
 |    Property    |    Description   |   type   |	default	|
 | -----------------  | ---------------- | :--------: | :----------: |
