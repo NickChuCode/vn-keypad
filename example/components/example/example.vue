@@ -10,7 +10,7 @@
     </div>
 </template>
 <script>
-import Keypad from 'base/keypad/keypad'
+import Keypad from 'dist/vn-keypad'
 export default {
   data() {
     return {
